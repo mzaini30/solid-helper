@@ -1,12 +1,12 @@
 import {createSignal} from 'solid-js'
-import {model} from '/lib/helper'
+import {model, modelObject} from '/lib/helper'
 
-const [nama, setNama] = createSignal('world')
+const [data, setData] = createSignal({name: 'Zen'})
 
 const App = () => (
   <div>
-    <h1>Hello {nama()}</h1>
-    <input type="text" use:model={[nama, setNama]}/>
+    <h1>Hello {data().name}</h1>
+    <input type="text" use:modelObject={[data, setData, 'name']}/>
   </div>
 )
 
