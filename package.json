@@ -8,6 +8,14 @@
     "dev": "vite",
     "build": "vite build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaini30/solid-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mzaini30/solid-helper/issues"
+  },
+  "homepage": "https://github.com/mzaini30/solid-helper#readme",
   "license": "MIT",
   "devDependencies": {
     "vite": "^2.3.8",
