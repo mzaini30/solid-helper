@@ -1,5 +1,5 @@
 import {createSignal} from 'solid-js'
-import {model, modelObject} from '/lib/helper'
+import {modelObject} from '/lib/helper'
 
 const [data, setData] = createSignal({name: 'Zen'})
 
