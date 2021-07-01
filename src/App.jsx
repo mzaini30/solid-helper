@@ -1,12 +1,16 @@
 import {createSignal} from 'solid-js'
-import {modelObject} from '/lib/helper'
+import {modelCheckbox} from '/lib/helper'
 
-const [data, setData] = createSignal({name: 'Zen'})
+const [foods, setFoods] = createSignal(['milk', 'water'])
 
 const App = () => (
   <div>
-    <h1>Hello {data().name}</h1>
-    <input type="text" use:modelObject={[data, setData, 'name']}/>
+    <h1>I love: {JSON.stringify(foods())}</h1>
+    <hr/>
+    <label><input type="checkbox" use:modelCheckbox={[foods, setFoods, 'milk']}/> milk</label>
+    <label><input type="checkbox" use:modelCheckbox={[foods, setFoods, 'bread']}/> bread</label>
+    <label><input type="checkbox" use:modelCheckbox={[foods, setFoods, 'meat']}/> meat</label>
+    <label><input type="checkbox" use:modelCheckbox={[foods, setFoods, 'water']}/> water</label>
   </div>
 )
 
