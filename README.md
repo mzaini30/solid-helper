@@ -24,7 +24,7 @@ export default App
 
 ```jsx
 import {createSignal} from 'solid-js'
-import {model, modelObject} from '/lib/helper'
+import {model, modelObject} from 'solid-helper'
 
 const [data, setData] = createSignal({name: 'Zen'})
 
