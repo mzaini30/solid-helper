@@ -1,8 +1,10 @@
 # Solid Helper
 
-Helper for SolidJS
+Helper for Solid JS
 
-## model
+## Usage
+
+### model
 
 ```jsx
 import {createSignal} from 'solid-js'
@@ -20,7 +22,7 @@ const App = () => (
 export default App
 ```
 
-## modelObject
+### modelObject
 
 ```jsx
 import {createSignal} from 'solid-js'
@@ -37,3 +39,21 @@ const App = () => (
 
 export default App
 ```
+
+### ESLint workaround
+
+To avoid ESLint warning, create a `global.d.ts` file or put this code on any of your script.
+
+```ts
+declare module "solid-js" {
+  namespace JSX {
+    interface Directives {
+      model: [() => any, (v: any) => any, ...any];
+    }
+  }
+}
+```
+
+## License
+
+[MIT](./LICENSE)
