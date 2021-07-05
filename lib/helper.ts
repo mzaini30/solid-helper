@@ -20,7 +20,7 @@ export const modelCheckbox = (
 ): void => {
   const [field, setField, item] = value();
   createRenderEffect(() => (element.value = field()));
-  element.addEventListener("change", x => {
+  element.addEventListener("change", (x) => {
     if ((x.target as HTMLInputElement).checked) {
       setField([...field(), item]);
     } else {
