@@ -22,18 +22,18 @@ const App = () => (
 export default App;
 ```
 
-### modelObject
+You can use it for objects:
 
 ```jsx
 import { createSignal } from "solid-js";
-import { modelObject } from "solid-helper";
+import { model } from "solid-helper";
 
 const [data, setData] = createSignal({ name: "Zen" });
 
 const App = () => (
   <div>
     <h1>Hello {data().name}</h1>
-    <input type="text" use:modelObject={[data, setData, "name"]} />
+    <input type="text" use:model={[data, setData, "name"]} />
   </div>
 );
 
