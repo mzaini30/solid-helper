@@ -19,8 +19,8 @@ export const modelCheckbox = (
   value: () => any
 ): void => {
   const [field, setField, item] = value();
-  createRenderEffect(() => (element.value = field())); /*bagian ini diubah*/
-  element.addEventListener("change", x => {
+  createRenderEffect(() => (element.value = field()));
+  element.addEventListener("change", (x) => {
     if ((x.target as HTMLInputElement).checked) {
       setField([...field(), item]);
     } else {

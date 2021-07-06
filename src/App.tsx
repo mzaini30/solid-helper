@@ -3,7 +3,7 @@ import { model } from "../lib/helper";
 
 const App = (): JSXElement => {
   const [food, setFood] = createSignal({ name: "" });
-  console.log(model); // kalo ini dihapus bakal jadi `model is not defined`
+  console.log(model); // ts will raise a warning `model is not define` is this line is removed
 
   return (
     <div>
